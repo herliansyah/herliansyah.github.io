@@ -7,40 +7,70 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="hero">
+        <div class="hero-overlay"></div>
         <div class="container">
-            <h1>My Professional Portfolio</h1>
-            <p>A showcase of my skills and experience.</p>
+            <div class="hero-content">
+                <h1 class="hero-title">My Professional Portfolio</h1>
+                <p class="hero-subtitle">A showcase of my skills and experience in modern technology</p>
+                <div class="hero-cta">
+                    <a href="#skills" class="btn-primary">View My Work</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
         </div>
     </header>
 
     <main class="container">
-        <section id="skills">
-            <h2>Skills & Expertise</h2>
+        <section id="skills" class="skills-section">
+            <div class="section-header">
+                <h2>Skills & Expertise</h2>
+                <p class="section-subtitle">Technologies and areas where I excel</p>
+            </div>
             <div class="skills-grid">
-                <div class="skill">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=400&auto=format&fit=crop" alt="Web Development" loading="lazy">
+                    </div>
                     <h3>Web Development</h3>
                     <p>Develops Web Applications Using PHP MySQL</p>
                 </div>
-                <div class="skill">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=400&auto=format&fit=crop" alt="Mobile Development" loading="lazy">
+                    </div>
                     <h3>Mobile Development</h3>
                     <p>Develops Native Android Applications and Windows CE Applications using C#</p>
                 </div>
-                <div class="skill">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=400&auto=format&fit=crop" alt="Database Management" loading="lazy">
+                    </div>
                     <h3>Database Management</h3>
                     <p>Build Database Clustering using Percona XtraDB Cluster, Configure Database Backup Automation using Percona XtraBackup, and Maintaining Database Stability and Security.</p>
                 </div>
-                <div class="skill">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=400&auto=format&fit=crop" alt="Server Administration" loading="lazy">
+                    </div>
                     <h3>Server Administration</h3>
                     <p>Maintaining the Stability and Security of Production Servers (Linux), Build and maintain Testing Servers, Build Mirroring Server with Syncthing, Monitoring Production Server With Netdata, and Build Reverse Proxy & Server Load Balancer With Haproxy.</p>
                 </div>
-                <div class="skill">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=400&auto=format&fit=crop" alt="API Development" loading="lazy">
+                    </div>
                     <h3>API Development</h3>
                     <p>Build various API Client for Banking Transaction and Build BCA API Server for Realtime Transaction.</p>
                 </div>
-                <div class="skill">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?q=80&w=400&auto=format&fit=crop" alt="System Integration" loading="lazy">
+                    </div>
                     <h3>System Integration</h3>
-                    <p>Intergate BRINKS CDM ( Cash Deposit Machine ) with Internal System.</p>
+                    <p>Integrate BRINKS CDM ( Cash Deposit Machine ) with Internal System.</p>
                 </div>
             </div>
         </section>
