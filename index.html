@@ -5,140 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herliansyah - Full Stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --text-color: #1f2937;
-            --light-bg: #f3f4f6;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            color: var(--text-color);
-        }
-
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            display: flex;
-            align-items: center;
-            padding: 2rem;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 4px solid white;
-            margin-bottom: 2rem;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .tagline {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            transition: transform 0.3s;
-        }
-
-        .social-links a:hover {
-            transform: translateY(-5px);
-        }
-
-        .section {
-            padding: 5rem 2rem;
-        }
-
-        .section:nth-child(even) {
-            background-color: var(--light-bg);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .skill-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        button {
-            background: var(--primary-color);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        button:hover {
-            background: var(--secondary-color);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="floating-shapes">
+    </div>
+
     <section class="hero">
         <div class="hero-content">
             <img src="profile.jpg" alt="Herliansyah" class="profile-img">
-            <h1>Herliansyah</h1>
+            <h1 class="glowing-text">Herliansyah</h1>
             <p class="tagline">Full Stack Web Developer & Go Developer</p>
             <div class="social-links">
                 <a href="#"><i class="fab fa-github"></i></a>
@@ -158,7 +34,7 @@
 
     <section class="section">
         <div class="container">
-            <h2>Keahlian</h2>
+            <h2 class="section-title">Keahlian</h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <i class="fas fa-code fa-3x"></i>
@@ -181,6 +57,35 @@
 
     <section class="section">
         <div class="container">
+            <h2 class="section-title">Proyek Terbaru</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="project1.jpg" alt="Project 1" class="project-image">
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Platform e-commerce lengkap dengan Go dan React</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project2.jpg" alt="Project 2" class="project-image">
+                    <div class="project-content">
+                        <h3>AI Dashboard</h3>
+                        <p>Dashboard analitik dengan integrasi AI</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project3.jpg" alt="Project 3" class="project-image">
+                    <div class="project-content">
+                        <h3>IoT Monitoring</h3>
+                        <p>Sistem monitoring IoT real-time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
             <h2>Hubungi Saya</h2>
             <div class="contact-form">
                 <div class="form-group">
@@ -192,9 +97,24 @@
                 <div class="form-group">
                     <textarea rows="5" placeholder="Pesan"></textarea>
                 </div>
-                <button type="submit">Kirim Pesan</button>
+                <button type="submit" class="btn-primary">Kirim Pesan</button>
             </div>
         </div>
     </section>
+
+    <script>
+        // Menambahkan floating shapes
+        const shapes = document.querySelector('.floating-shapes');
+        for(let i = 0; i < 50; i++) {
+            const shape = document.createElement('div');
+            shape.classList.add('shape');
+            shape.style.left = Math.random() * 100 + '%';
+            shape.style.width = Math.random() * 30 + 10 + 'px';
+            shape.style.height = shape.style.width;
+            shape.style.animationDelay = Math.random() * 15 + 's';
+            shape.style.animationDuration = Math.random() * 15 + 10 + 's';
+            shapes.appendChild(shape);
+        }
+    </script>
 </body>
 </html>
